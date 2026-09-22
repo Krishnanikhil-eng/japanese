@@ -1,21 +1,28 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { ArrowLeft, ArrowRight, RotateCw, Shuffle, Volume2 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { ArrowLeft, ArrowRight, RotateCw, Shuffle, Check, X } from "lucide-react";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { logAttempt } from "@/services/learning";
 import type { Vocabulary } from "@/types";
 
 interface FlashcardDeckProps {
   items: Vocabulary[];
   onBackToBrowse: () => void;
+  onAttemptLogged?: () => void;
 }
 
-export function FlashcardDeck({ items, onBackToBrowse }: FlashcardDeckProps) {
+export function FlashcardDeck({
+  items,
+  onBackToBrowse,
+  onAttemptLogged,
+}: FlashcardDeckProps) {
   const [deck, setDeck] = useState<Vocabulary[]>(items);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [feedback, setFeedback] = useState<string | null>(null);
 
   useEffect(() => {
     setDeck(items);
@@ -25,11 +32,13 @@ export function FlashcardDeck({ items, onBackToBrowse }: FlashcardDeckProps) {
 
   const handleNext = useCallback(() => {
     setIsFlipped(false);
+    setFeedback(null);
     setCurrentIndex((prev) => (prev < deck.length - 1 ? prev + 1 : 0));
   }, [deck.length]);
 
   const handlePrev = useCallback(() => {
     setIsFlipped(false);
+    setFeedback(null);
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : deck.length - 1));
   }, [deck.length]);
 
@@ -37,14 +46,38 @@ export function FlashcardDeck({ items, onBackToBrowse }: FlashcardDeckProps) {
     setIsFlipped((prev) => !prev);
   }, []);
 
+  const handleGrade = async (isCorrect: boolean) => {
+    const current = deck[currentIndex];
+    if (!current) return;
+
+    await logAttempt({
+      questionId: `flashcard_${current.id}`,
+      conceptId: current.id,
+      conceptType: "vocabulary",
+      answer: isCorrect ? current.meaning : "incorrect_self_rating",
+      correct: isCorrect,
+      timestamp: Date.now(),
+    });
+
+    setFeedback(isCorrect ? "✓ Good! Saved to FSRS queue" : "✕ Again! Scheduled for relearning");
+    if (onAttemptLogged) {
+      onAttemptLogged();
+    }
+
+    setTimeout(() => {
+      handleNext();
+    }, 600);
+  };
+
   const handleShuffle = () => {
     const shuffled = [...deck].sort(() => Math.random() - 0.5);
     setDeck(shuffled);
     setCurrentIndex(0);
     setIsFlipped(false);
+    setFeedback(null);
   };
 
-  // Keyboard navigation: Space/Enter = flip, ArrowLeft = prev, ArrowRight = next
+  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
@@ -59,12 +92,18 @@ export function FlashcardDeck({ items, onBackToBrowse }: FlashcardDeckProps) {
       } else if (e.key === "ArrowLeft") {
         e.preventDefault();
         handlePrev();
+      } else if (e.key === "1" && isFlipped) {
+        e.preventDefault();
+        handleGrade(false);
+      } else if (e.key === "2" && isFlipped) {
+        e.preventDefault();
+        handleGrade(true);
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleFlip, handleNext, handlePrev]);
+  }, [handleFlip, handleNext, handlePrev, isFlipped]);
 
   if (deck.length === 0) {
     return (
@@ -89,6 +128,11 @@ export function FlashcardDeck({ items, onBackToBrowse }: FlashcardDeckProps) {
           ← Back to Browse
         </Button>
         <div className="flex items-center gap-2">
+          {feedback && (
+            <span className="text-xs font-semibold text-rose-600 dark:text-rose-400 animate-in fade-in-0">
+              {feedback}
+            </span>
+          )}
           <Badge variant="outline" className="font-mono text-xs">
             {currentIndex + 1} / {deck.length}
           </Badge>
@@ -167,51 +211,74 @@ export function FlashcardDeck({ items, onBackToBrowse }: FlashcardDeckProps) {
             )}
           </div>
 
-          {/* Bottom Flip Indicator */}
+          {/* Bottom Indicator */}
           <div className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
             <RotateCw className="h-3.5 w-3.5 text-rose-500" />
-            <span>{isFlipped ? "Click to see word" : "Click to see meaning"}</span>
+            <span>{isFlipped ? "Grade your recall below" : "Click to flip"}</span>
           </div>
         </Card>
       </div>
 
-      {/* Navigation Footer */}
-      <div className="flex items-center justify-between gap-4">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={handlePrev}
-          className="flex-1 gap-1"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          <span>Previous</span>
-        </Button>
+      {/* Grading Controls (Active when card is flipped) */}
+      {isFlipped ? (
+        <div className="space-y-2 animate-in fade-in-50">
+          <div className="flex items-center justify-between gap-3">
+            <Button
+              variant="destructive"
+              size="default"
+              onClick={() => handleGrade(false)}
+              className="flex-1 gap-1.5 font-semibold"
+            >
+              <X className="h-4 w-4" />
+              <span>Again (Incorrect) [1]</span>
+            </Button>
+            <Button
+              variant="sakura"
+              size="default"
+              onClick={() => handleGrade(true)}
+              className="flex-1 gap-1.5 font-semibold bg-emerald-600 hover:bg-emerald-700 text-white"
+            >
+              <Check className="h-4 w-4" />
+              <span>Good (Correct) [2]</span>
+            </Button>
+          </div>
+          <p className="text-center text-[10px] text-muted-foreground">
+            Grading automatically records an Attempt and schedules next review using ts-fsrs.
+          </p>
+        </div>
+      ) : (
+        /* Standard Navigation */
+        <div className="flex items-center justify-between gap-4">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handlePrev}
+            className="flex-1 gap-1"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span>Previous</span>
+          </Button>
 
-        <Button
-          variant="secondary"
-          size="sm"
-          onClick={handleFlip}
-          className="flex-1"
-        >
-          Flip Card
-        </Button>
+          <Button
+            variant="secondary"
+            size="sm"
+            onClick={handleFlip}
+            className="flex-1"
+          >
+            Flip Card
+          </Button>
 
-        <Button
-          variant="sakura"
-          size="sm"
-          onClick={handleNext}
-          className="flex-1 gap-1"
-        >
-          <span>Next</span>
-          <ArrowRight className="h-4 w-4" />
-        </Button>
-      </div>
-
-      <p className="text-center text-[11px] text-muted-foreground">
-        Keyboard: <kbd className="px-1 py-0.5 rounded bg-muted">Space</kbd> to flip,{" "}
-        <kbd className="px-1 py-0.5 rounded bg-muted">←</kbd> and{" "}
-        <kbd className="px-1 py-0.5 rounded bg-muted">→</kbd> to navigate
-      </p>
+          <Button
+            variant="sakura"
+            size="sm"
+            onClick={handleNext}
+            className="flex-1 gap-1"
+          >
+            <span>Next</span>
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
+      )}
     </div>
   );
 }
