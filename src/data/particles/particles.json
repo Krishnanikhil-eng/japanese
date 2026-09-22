@@ -1,0 +1,318 @@
+[
+  {
+    "id": "particle-wa",
+    "particle": "は",
+    "uses": [
+      {
+        "meaning": "Topic Marker",
+        "description": "Establishes what the sentence is about (the topic). Pronounced 'wa'.",
+        "examples": [
+          {
+            "japanese": "わたしは学生です。",
+            "reading": "わたしはがくせいです。",
+            "english": "As for me, I am a student."
+          }
+        ]
+      },
+      {
+        "meaning": "Contrast / Emphasis",
+        "description": "Contrasts two statements or highlights a specific element.",
+        "examples": [
+          {
+            "japanese": "肉は食べますが、魚は食べません。",
+            "reading": "にくはたべますが、さかなはたべません。",
+            "english": "I eat meat, but I don't eat fish."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-ga"]
+  },
+  {
+    "id": "particle-ga",
+    "particle": "が",
+    "uses": [
+      {
+        "meaning": "Subject Marker",
+        "description": "Identifies the specific grammatical subject performing an action or being described.",
+        "examples": [
+          {
+            "japanese": "雨が降っています。",
+            "reading": "あめがふっています。",
+            "english": "Rain is falling."
+          }
+        ]
+      },
+      {
+        "meaning": "Object of Potential / Preference / Existence",
+        "description": "Marks the object with verbs of existence (あります/います) or adjectives like 好き/上手.",
+        "examples": [
+          {
+            "japanese": "教室に猫がいます。",
+            "reading": "きょうしつにねこがいます。",
+            "english": "There is a cat in the classroom."
+          },
+          {
+            "japanese": "日本語が好きです。",
+            "reading": "にほんごがすきです。",
+            "english": "I like the Japanese language."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-wa", "particle-o"]
+  },
+  {
+    "id": "particle-o",
+    "particle": "を",
+    "uses": [
+      {
+        "meaning": "Direct Object Marker",
+        "description": "Marks the direct recipient of a transitive action verb. Pronounced 'o'.",
+        "examples": [
+          {
+            "japanese": "水を飲みます。",
+            "reading": "みずをのみます。",
+            "english": "I drink water."
+          },
+          {
+            "japanese": "日本語を勉強します。",
+            "reading": "にほんごをべんきょうします。",
+            "english": "I study Japanese."
+          }
+        ]
+      },
+      {
+        "meaning": "Point of Departure / Motion Through",
+        "description": "Marks the space through or out of which movement takes place.",
+        "examples": [
+          {
+            "japanese": "毎朝公園を散歩します。",
+            "reading": "まいあさこうえんをさんぽします。",
+            "english": "I take a walk through the park every morning."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-ga", "particle-de"]
+  },
+  {
+    "id": "particle-ni",
+    "particle": "に",
+    "uses": [
+      {
+        "meaning": "Specific Point in Time",
+        "description": "Marks a specific numerical time at which an action occurs.",
+        "examples": [
+          {
+            "japanese": "7時に起きます。",
+            "reading": "しちじにおきます。",
+            "english": "I wake up at 7 o'clock."
+          }
+        ]
+      },
+      {
+        "meaning": "Location of Existence / Presence",
+        "description": "Marks the static location where something exists with あります or います.",
+        "examples": [
+          {
+            "japanese": "庭に犬がいます。",
+            "reading": "にわにいぬがいます。",
+            "english": "There is a dog in the garden."
+          },
+          {
+            "japanese": "机の上に本があります。",
+            "reading": "つくえのうえにほんがあります。",
+            "english": "There is a book on the desk."
+          }
+        ]
+      },
+      {
+        "meaning": "Destination / Goal of Motion",
+        "description": "Marks the final destination reached by movement verbs.",
+        "examples": [
+          {
+            "japanese": "日本に着きました。",
+            "reading": "にほんにつきました。",
+            "english": "I arrived in Japan."
+          }
+        ]
+      },
+      {
+        "meaning": "Indirect Object / Recipient",
+        "description": "Marks the person who receives an object or action (e.g. giving, calling).",
+        "examples": [
+          {
+            "japanese": "友だちに手紙を送ります。",
+            "reading": "ともだちにてがみをおくります。",
+            "english": "I send a letter to my friend."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-de", "particle-e"]
+  },
+  {
+    "id": "particle-de",
+    "particle": "で",
+    "uses": [
+      {
+        "meaning": "Location of Active Action",
+        "description": "Marks the location where a dynamic action takes place.",
+        "examples": [
+          {
+            "japanese": "図書館で勉強します。",
+            "reading": "としょかんでべんきょうします。",
+            "english": "I study in the library."
+          },
+          {
+            "japanese": "レストランでご飯を食べます。",
+            "reading": "レストランでごはんをたべます。",
+            "english": "I eat a meal at the restaurant."
+          }
+        ]
+      },
+      {
+        "meaning": "Means / Tool / Instrument",
+        "description": "Marks the instrument, language, or vehicle used to accomplish an action.",
+        "examples": [
+          {
+            "japanese": "バスで学校へ行きます。",
+            "reading": "バスでがっこうへいきます。",
+            "english": "I go to school by bus."
+          },
+          {
+            "japanese": "日本語で話してください。",
+            "reading": "にほんごではなしてください。",
+            "english": "Please speak in Japanese."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-ni", "particle-to"]
+  },
+  {
+    "id": "particle-e",
+    "particle": "へ",
+    "uses": [
+      {
+        "meaning": "Direction of Movement",
+        "description": "Pronounced 'e'. Emphasizes the direction toward which motion is oriented.",
+        "examples": [
+          {
+            "japanese": "東京へ行きます。",
+            "reading": "とうきょうへいきます。",
+            "english": "I am heading toward Tokyo."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-ni"]
+  },
+  {
+    "id": "particle-to",
+    "particle": "と",
+    "uses": [
+      {
+        "meaning": "Complete Noun Conjunction ('and')",
+        "description": "Exhaustively lists two or more nouns.",
+        "examples": [
+          {
+            "japanese": "パンと卵を買いました。",
+            "reading": "パンとたまごをかいました。",
+            "english": "I bought bread and eggs."
+          }
+        ]
+      },
+      {
+        "meaning": "Accompaniment ('with')",
+        "description": "Marks the person or companion doing an action together with the subject.",
+        "examples": [
+          {
+            "japanese": "友だちと映画を見ます。",
+            "reading": "ともだちとえいがをみます。",
+            "english": "I watch a movie with a friend."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-de", "particle-mo"]
+  },
+  {
+    "id": "particle-mo",
+    "particle": "も",
+    "uses": [
+      {
+        "meaning": "Inclusion ('also / too')",
+        "description": "Replaces は, が, or を to express that the statement applies to this noun too.",
+        "examples": [
+          {
+            "japanese": "わたしも学生です。",
+            "reading": "わたしもがくせいです。",
+            "english": "I am also a student."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-wa"]
+  },
+  {
+    "id": "particle-no",
+    "particle": "の",
+    "uses": [
+      {
+        "meaning": "Noun Modification & Possession",
+        "description": "Connects two nouns (N1 modifies N2: ownership, affiliation, origin, material).",
+        "examples": [
+          {
+            "japanese": "わたしのかばんです。",
+            "reading": "わたしのかばんです。",
+            "english": "It is my bag."
+          },
+          {
+            "japanese": "日本の車です。",
+            "reading": "にほんのくるまです。",
+            "english": "It is a Japanese car."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-wa"]
+  },
+  {
+    "id": "particle-kara",
+    "particle": "から",
+    "uses": [
+      {
+        "meaning": "Starting Point in Time or Place ('from')",
+        "description": "Marks the beginning time, origin location, or source.",
+        "examples": [
+          {
+            "japanese": "会社は9時からです。",
+            "reading": "かいしゃはくじからです。",
+            "english": "Work starts from 9 o'clock."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-made"]
+  },
+  {
+    "id": "particle-made",
+    "particle": "まで",
+    "uses": [
+      {
+        "meaning": "Ending Point in Time or Place ('until / to')",
+        "description": "Marks the destination or ending time of an action or state.",
+        "examples": [
+          {
+            "japanese": "5時まで働きます。",
+            "reading": "ごじまではたらきます。",
+            "english": "I work until 5 o'clock."
+          }
+        ]
+      }
+    ],
+    "confusionPairs": ["particle-kara", "particle-ni"]
+  }
+]

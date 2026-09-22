@@ -1,0 +1,80 @@
+[
+  {
+    "id": "pair-ni-de",
+    "particleA": "に",
+    "particleB": "で",
+    "title": "に vs で (Location of Existence vs Location of Action)",
+    "distinction": "Use に with static verbs of existence (あります, います, 住みます) to specify WHERE something exists. Use で with dynamic action verbs (勉強します, 食べます, 買います) to specify WHERE an action occurs, or the MEANS used.",
+    "comparisonExamples": [
+      {
+        "sentence": "部屋___本があります。",
+        "correctParticle": "に",
+        "wrongParticle": "で",
+        "explanation": "あります is a verb of existence; static presence requires に."
+      },
+      {
+        "sentence": "部屋___本を読みます。",
+        "correctParticle": "で",
+        "wrongParticle": "に",
+        "explanation": "読みます is an active verb; the location where the action occurs requires で."
+      }
+    ]
+  },
+  {
+    "id": "pair-wa-ga",
+    "particleA": "は",
+    "particleB": "が",
+    "title": "は vs が (Topic vs Subject / Focus)",
+    "distinction": "は marks the shared topic already known to speakers or establishes contrast. が identifies new information, specific subjects, or answers question words (だれが, なにが).",
+    "comparisonExamples": [
+      {
+        "sentence": "わたし___田中です。",
+        "correctParticle": "は",
+        "wrongParticle": "が",
+        "explanation": "わたし establishes the topic of identity."
+      },
+      {
+        "sentence": "だれ___来ましたか。",
+        "correctParticle": "が",
+        "wrongParticle": "は",
+        "explanation": "Question words like だれ cannot take は as topic; they take が."
+      }
+    ]
+  },
+  {
+    "id": "pair-ni-e",
+    "particleA": "に",
+    "particleB": "へ",
+    "title": "に vs へ (Goal / Destination vs Direction of Motion)",
+    "distinction": "に emphasizes the specific destination reached. へ (pronounced 'e') emphasizes the direction toward which motion is oriented.",
+    "comparisonExamples": [
+      {
+        "sentence": "京都___行きます。",
+        "correctParticle": "へ",
+        "wrongParticle": "で",
+        "explanation": "Direction of travel takes へ (or destination に)."
+      }
+    ]
+  },
+  {
+    "id": "pair-to-de",
+    "particleA": "と",
+    "particleB": "で",
+    "title": "と vs で (Accompaniment vs Means / Solo)",
+    "distinction": "と specifies doing something with another person (家族と). で specifies the means/method, or doing an action alone (一人で).",
+    "comparisonExamples": [
+      {
+        "sentence": "友だち___映画を見ました。",
+        "correctParticle": "と",
+        "wrongParticle": "で",
+        "explanation": "Watching a movie together with a companion requires と."
+      },
+      {
+        "sentence": "一人___映画を見ました。",
+        "correctParticle": "で",
+        "wrongParticle": "と",
+        "explanation": "Acting alone is a condition/mode of action, requiring で."
+      }
+    ]
+  }
+]

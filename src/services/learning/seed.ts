@@ -7,8 +7,9 @@
 
 import { db } from "@/db";
 import { SEED_LESSONS } from "@/data/lessons";
+import { PARTICLES } from "@/data/particles";
 import { DEFAULT_JLPT_TARGET_DATE, DEFAULT_JLPT_LEVEL, DEFAULT_USER_GOALS } from "@/domain/enums";
-import type { Lesson, Concept, Vocabulary, UserState } from "@/types";
+import type { Lesson, Concept, Vocabulary, UserState, Particle } from "@/types";
 
 export interface SeedResult {
   seeded: boolean;
@@ -51,10 +52,11 @@ export async function seedInitialContent(force = false): Promise<SeedResult> {
   }
 
   // Perform bulk upsert in a single atomic transaction
-  await db.transaction("rw", [db.lessons, db.concepts, db.vocabulary, db.userState], async () => {
+  await db.transaction("rw", [db.lessons, db.concepts, db.vocabulary, db.particles, db.userState], async () => {
     await db.lessons.bulkPut(allLessons);
     await db.concepts.bulkPut(allConcepts);
     await db.vocabulary.bulkPut(allVocabulary);
+    await db.particles.bulkPut(PARTICLES);
 
     // Initialize UserState if not already present
     const existingState = await db.userState.get("default-user");

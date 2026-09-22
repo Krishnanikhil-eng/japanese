@@ -1,13 +1,13 @@
 // ============================================================
 // Repository Service — Learning Data Access
 // ============================================================
-// Centralized queries for Lessons, Concepts, and Vocabulary.
+// Centralized queries for Lessons, Concepts, Vocabulary, and Particles.
 // Connects UI components to local Dexie IndexedDB tables.
 // ============================================================
 
 import { db } from "@/db";
 import { seedInitialContent } from "./seed";
-import type { Lesson, Concept, Vocabulary, JLPTLevel } from "@/types";
+import type { Lesson, Concept, Vocabulary, Particle, JLPTLevel } from "@/types";
 
 export interface VocabularyQueryFilters {
   lessonId?: string;
@@ -49,6 +49,22 @@ export async function getLessonById(id: string): Promise<Lesson | undefined> {
 export async function getConceptsByLesson(lessonId: string): Promise<Concept[]> {
   await ensureContentSeeded();
   return db.concepts.where("lessonId").equals(lessonId).toArray();
+}
+
+/**
+ * Retrieves all N5 particles from Dexie.
+ */
+export async function getAllParticles(): Promise<Particle[]> {
+  await ensureContentSeeded();
+  return db.particles.toArray();
+}
+
+/**
+ * Retrieves a particle by its ID (e.g. 'particle-ni').
+ */
+export async function getParticleById(id: string): Promise<Particle | undefined> {
+  await ensureContentSeeded();
+  return db.particles.get(id);
 }
 
 /**
