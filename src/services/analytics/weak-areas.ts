@@ -43,10 +43,10 @@ export async function getWeakAreas(): Promise<WeakArea[]> {
     const recentWindow = attempts.slice(-5);
     const recentMistakes = recentWindow.filter((a) => !a.correct).length;
 
-    // A concept is a weak area if accuracy is under 70% or there are recent mistakes with at least 1 wrong answer
+    // A concept is a weak area if accuracy is under 70% or there are multiple recent mistakes
     const hasWeakness =
       (totalAttempts >= 1 && accuracy < 0.7) ||
-      recentMistakes >= 1;
+      recentMistakes >= 2;
 
     if (!hasWeakness) {
       continue;
