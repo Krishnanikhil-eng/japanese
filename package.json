@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "imports": {
+    "@/*": "./src/*"
+  },
   "description": "Local-first Japanese-learning companion app for Minna no Nihongo and JLPT N5",
   "scripts": {
     "dev": "next dev",

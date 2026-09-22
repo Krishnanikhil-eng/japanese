@@ -12,7 +12,7 @@ import {
   type Card,
   type State,
 } from "ts-fsrs";
-import { MASTERY_THRESHOLDS } from "@/domain/enums";
+import { MASTERY_THRESHOLDS } from "../../domain/enums.ts";
 import type { MasteryLevel } from "@/types";
 
 export { Rating };
