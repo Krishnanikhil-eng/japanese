@@ -1,0 +1,365 @@
+{
+  "lesson": {
+    "id": "lesson-05",
+    "number": 5,
+    "title": "Movement, Transit & Calendar Dates",
+    "titleJa": "第5課 移動・交通手段・日付",
+    "topic": "Movement verbs (ikimasu/kimasu/kaerimasu), particles he/de/to, and calendar dates",
+    "status": "available",
+    "description": "Learn to state destinations using particle へ, modes of transportation with particle で, companions with と, and calendar dates.",
+    "objectives": [
+      "Use movement verbs 行きます (go), 来ます (come), and 帰ります (return)",
+      "Mark direction and destination with the particle へ",
+      "Express means of transportation using the instrument particle で",
+      "Express companions using the particle と",
+      "Ask and answer when an event will occur using いつ"
+    ],
+    "vocabularyCount": 16,
+    "grammarPoints": [
+      "N(place) へ 行きます / 来ます / 帰ります (Go/Come/Return to N)",
+      "どこへも 行きません (Go nowhere / not go anywhere)",
+      "N(vehicle) で 行きます (Go by means of N)",
+      "N(person) と 行きます (Go with N)",
+      "いつ 〜ますか (When will you ~?)"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "concept-05-01",
+      "lessonId": "lesson-05",
+      "type": "particle",
+      "title": "Direction Particle へ",
+      "titleJa": "助詞「へ」（方向）",
+      "description": "Pronounced 'e'. Marks the destination or direction toward which movement is oriented.",
+      "examples": [
+        {
+          "japanese": "京都へ行きます。",
+          "reading": "きょうとへいきます。",
+          "english": "I am going to Kyoto."
+        },
+        {
+          "japanese": "うちへ帰ります。",
+          "reading": "うちへかえります。",
+          "english": "I am going home."
+        }
+      ],
+      "prerequisites": ["concept-04-01"]
+    },
+    {
+      "id": "concept-05-02",
+      "lessonId": "lesson-05",
+      "type": "particle",
+      "title": "Means & Transport Particle で",
+      "titleJa": "助詞「で」（交通手段）",
+      "description": "Marks the vehicle, medium, or means by which an action is performed.",
+      "examples": [
+        {
+          "japanese": "新幹線で行きました。",
+          "reading": "しんかんせんでいきました。",
+          "english": "I went by Shinkansen (bullet train)."
+        },
+        {
+          "japanese": "歩いて駅へ行きます。",
+          "reading": "あるいてえきへいきます。",
+          "english": "I go to the station on foot (note: 歩いて does not take で)."
+        }
+      ],
+      "prerequisites": ["concept-05-01"]
+    },
+    {
+      "id": "concept-05-03",
+      "lessonId": "lesson-05",
+      "type": "particle",
+      "title": "Accompaniment Particle と",
+      "titleJa": "助詞「と」（同伴者）",
+      "description": "Marks the person or partner with whom an action is performed.",
+      "examples": [
+        {
+          "japanese": "家族と日本へ来ました。",
+          "reading": "かぞくとにほんへきました。",
+          "english": "I came to Japan with my family."
+        },
+        {
+          "japanese": "一人で旅行します。",
+          "reading": "ひとりでりょこうします。",
+          "english": "I will travel alone."
+        }
+      ],
+      "prerequisites": ["concept-05-01"]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "vocab-05-01",
+      "lessonId": "lesson-05",
+      "word": "行きます",
+      "reading": "いきます",
+      "meaning": "to go",
+      "partOfSpeech": "verb",
+      "jlptLevel": "N5",
+      "topic": "Movement Verbs",
+      "examples": [
+        {
+          "japanese": "スーパーへ行きます。",
+          "reading": "スーパーへいきます。",
+          "english": "I am going to the supermarket."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-02",
+      "lessonId": "lesson-05",
+      "word": "来ます",
+      "reading": "きます",
+      "meaning": "to come",
+      "partOfSpeech": "verb",
+      "jlptLevel": "N5",
+      "topic": "Movement Verbs",
+      "examples": [
+        {
+          "japanese": "友だちがうちに身に来ます。",
+          "reading": "ともだちがうちにみにきます。",
+          "english": "A friend is coming to my house."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-03",
+      "lessonId": "lesson-05",
+      "word": "帰ります",
+      "reading": "かえります",
+      "meaning": "to return; to go back home",
+      "partOfSpeech": "verb",
+      "jlptLevel": "N5",
+      "topic": "Movement Verbs",
+      "examples": [
+        {
+          "japanese": "国へ帰ります。",
+          "reading": "くにへかえります。",
+          "english": "I will return to my home country."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-04",
+      "lessonId": "lesson-05",
+      "word": "学校",
+      "reading": "がっこう",
+      "meaning": "school",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Destinations",
+      "examples": [
+        {
+          "japanese": "バスで学校へ通います。",
+          "reading": "バスでがっこうへかよいます。",
+          "english": "I commute to school by bus."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-05",
+      "lessonId": "lesson-05",
+      "word": "駅",
+      "reading": "えき",
+      "meaning": "railway station",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Destinations",
+      "examples": [
+        {
+          "japanese": "駅で待ち合わせます。",
+          "reading": "えきでまちあわせます。",
+          "english": "Let's meet at the station."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-06",
+      "lessonId": "lesson-05",
+      "word": "飛行機",
+      "reading": "ひこうき",
+      "meaning": "airplane",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Vehicles & Transport",
+      "examples": [
+        {
+          "japanese": "飛行機で北海道へ行きました。",
+          "reading": "ひこうきでほっかいどうへいきました。",
+          "english": "I went to Hokkaido by airplane."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-07",
+      "lessonId": "lesson-05",
+      "word": "船",
+      "reading": "ふね",
+      "meaning": "ship; boat",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Vehicles & Transport",
+      "examples": [
+        {
+          "japanese": "船で島へ渡ります。",
+          "reading": "ふねでしまへわたります。",
+          "english": "I cross to the island by boat."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-08",
+      "lessonId": "lesson-05",
+      "word": "電車",
+      "reading": "でんしゃ",
+      "meaning": "electric train",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Vehicles & Transport",
+      "examples": [
+        {
+          "japanese": "電車は混んでいます。",
+          "reading": "でんしゃはこんでいます。",
+          "english": "The train is crowded."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-09",
+      "lessonId": "lesson-05",
+      "word": "地下鉄",
+      "reading": "ちかてつ",
+      "meaning": "subway; underground",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Vehicles & Transport",
+      "examples": [
+        {
+          "japanese": "地下鉄に乗ります。",
+          "reading": "ちかてつにのります。",
+          "english": "I ride the subway."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-10",
+      "lessonId": "lesson-05",
+      "word": "新幹線",
+      "reading": "しんかんせん",
+      "meaning": "Shinkansen; bullet train",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Vehicles & Transport",
+      "examples": [
+        {
+          "japanese": "新幹線はとても速いです。",
+          "reading": "しんかんせんはとてもはやいです。",
+          "english": "The bullet train is very fast."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-11",
+      "lessonId": "lesson-05",
+      "word": "バス",
+      "reading": "バス",
+      "meaning": "bus",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Vehicles & Transport",
+      "examples": [
+        {
+          "japanese": "バスが来ました。",
+          "reading": "バスがきました。",
+          "english": "The bus has arrived."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-12",
+      "lessonId": "lesson-05",
+      "word": "自転車",
+      "reading": "じてんしゃ",
+      "meaning": "bicycle; bike",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Vehicles & Transport",
+      "examples": [
+        {
+          "japanese": "自転車で駅まで行きます。",
+          "reading": "じてんしゃでえきまでいきます。",
+          "english": "I go to the station by bicycle."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-13",
+      "lessonId": "lesson-05",
+      "word": "歩いて",
+      "reading": "あるいて",
+      "meaning": "on foot; walking",
+      "partOfSpeech": "adverb",
+      "jlptLevel": "N5",
+      "topic": "Vehicles & Transport",
+      "examples": [
+        {
+          "japanese": "家から駅まで歩いて10分です。",
+          "reading": "いえからえきまであるいてじゅっぷんです。",
+          "english": "It is 10 minutes on foot from my house to the station."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-14",
+      "lessonId": "lesson-05",
+      "word": "友だち",
+      "reading": "ともだち",
+      "meaning": "friend; companion",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "People & Companions",
+      "examples": [
+        {
+          "japanese": "友だちと映画を見ます。",
+          "reading": "ともだちとえいがをみます。",
+          "english": "I will watch a movie with a friend."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-15",
+      "lessonId": "lesson-05",
+      "word": "家族",
+      "reading": "かぞく",
+      "meaning": "family",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "People & Companions",
+      "examples": [
+        {
+          "japanese": "家族は元気です。",
+          "reading": "かぞくはげんきです。",
+          "english": "My family is doing well."
+        }
+      ]
+    },
+    {
+      "id": "vocab-05-16",
+      "lessonId": "lesson-05",
+      "word": "いつ",
+      "reading": "いつ",
+      "meaning": "when (interrogative)",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Question Words",
+      "examples": [
+        {
+          "japanese": "日本へいつ来ましたか。",
+          "reading": "にほんへいつきましたか。",
+          "english": "When did you come to Japan?"
+        }
+      ]
+    }
+  ]
+}

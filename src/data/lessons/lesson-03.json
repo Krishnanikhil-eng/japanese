@@ -1,0 +1,343 @@
+{
+  "lesson": {
+    "id": "lesson-03",
+    "number": 3,
+    "title": "Places, Locations & Pricing",
+    "titleJa": "第3課 場所と位置・値段",
+    "topic": "Locational demonstratives (koko/soko/asoko), asking directions, and prices",
+    "status": "available",
+    "description": "Learn how to ask for and describe locations, department store floors, origins of products, and item prices in yen.",
+    "objectives": [
+      "Ask and identify places using ここ, そこ, あそこ, and どこ",
+      "Use polite directional forms こちら, そちら, あちら, and どちら",
+      "Inquire where an item was manufactured or produced using どこ の N",
+      "Ask prices using いくら and understand yen values"
+    ],
+    "vocabularyCount": 16,
+    "grammarPoints": [
+      "ここ / そこ / あそこ は N(place) です (Here / There is N)",
+      "N1 は N2(place) です (N1 is at N2)",
+      "どこ / どちら ですか (Where / Which direction is it?)",
+      "N1 の N2 (Origin / Manufacturer: Where is N2 from?)",
+      "いくら ですか (How much is it?)"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "concept-03-01",
+      "lessonId": "lesson-03",
+      "type": "grammar",
+      "title": "Locational Demonstratives (ここ・そこ・あそこ)",
+      "titleJa": "ここ・そこ・あそこ",
+      "description": "Express place relative to speaker (ここ), listener (そこ), or distant from both (あそこ).",
+      "examples": [
+        {
+          "japanese": "ここは受付です。",
+          "reading": "ここはうけつけです。",
+          "english": "Here is the reception desk."
+        },
+        {
+          "japanese": "お手洗いはあそこです。",
+          "reading": "おてあらいはあそこです。",
+          "english": "The restroom is over there."
+        }
+      ],
+      "prerequisites": ["concept-02-01"]
+    },
+    {
+      "id": "concept-03-02",
+      "lessonId": "lesson-03",
+      "type": "grammar",
+      "title": "Polite Directional Demonstratives (こちら・そちら・あちら)",
+      "titleJa": "こちら・そちら・あちら",
+      "description": "Polite counterparts denoting direction, location, or associated institution.",
+      "examples": [
+        {
+          "japanese": "エレベーターはこちらです。",
+          "reading": "エレベーターはこちらです。",
+          "english": "The elevator is this way."
+        },
+        {
+          "japanese": "お国はどちらですか。",
+          "reading": "おくにはどちらですか。",
+          "english": "Which country are you from (polite)?"
+        }
+      ],
+      "prerequisites": ["concept-03-01"]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "vocab-03-01",
+      "lessonId": "lesson-03",
+      "word": "ここ",
+      "reading": "ここ",
+      "meaning": "here; this place",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Locations",
+      "examples": [
+        {
+          "japanese": "ここは教室です。",
+          "reading": "ここはきょうしつです。",
+          "english": "Here is the classroom."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-02",
+      "lessonId": "lesson-03",
+      "word": "そこ",
+      "reading": "そこ",
+      "meaning": "there; that place (near listener)",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Locations",
+      "examples": [
+        {
+          "japanese": "そこは事務所です。",
+          "reading": "そこはじむしょです。",
+          "english": "There is the office."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-03",
+      "lessonId": "lesson-03",
+      "word": "あそこ",
+      "reading": "あそこ",
+      "meaning": "over there; that place (distant)",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Locations",
+      "examples": [
+        {
+          "japanese": "あそこは食堂です。",
+          "reading": "あそこはしょくどうです。",
+          "english": "Over there is the cafeteria."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-04",
+      "lessonId": "lesson-03",
+      "word": "どこ",
+      "reading": "どこ",
+      "meaning": "where; what place",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Question Words",
+      "examples": [
+        {
+          "japanese": "トイレはどこですか。",
+          "reading": "トイレはどこですか。",
+          "english": "Where is the restroom?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-05",
+      "lessonId": "lesson-03",
+      "word": "教室",
+      "reading": "きょうしつ",
+      "meaning": "classroom",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Places in Building",
+      "examples": [
+        {
+          "japanese": "3階の教室です。",
+          "reading": "さんかいのきょうしつです。",
+          "english": "It is the classroom on the 3rd floor."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-06",
+      "lessonId": "lesson-03",
+      "word": "食堂",
+      "reading": "しょくどう",
+      "meaning": "dining hall; cafeteria",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Places in Building",
+      "examples": [
+        {
+          "japanese": "食堂で昼ご飯を食べます。",
+          "reading": "しょくどうでひるごはんをたべます。",
+          "english": "I eat lunch in the cafeteria."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-07",
+      "lessonId": "lesson-03",
+      "word": "事務所",
+      "reading": "じむしょ",
+      "meaning": "office",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Places in Building",
+      "examples": [
+        {
+          "japanese": "事務所はあちらです。",
+          "reading": "じむしょはあちらです。",
+          "english": "The office is that way."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-08",
+      "lessonId": "lesson-03",
+      "word": "受付",
+      "reading": "うけつけ",
+      "meaning": "reception desk; front desk",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Places in Building",
+      "examples": [
+        {
+          "japanese": "受付で聞いてください。",
+          "reading": "うけつけできいてください。",
+          "english": "Please ask at the reception desk."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-09",
+      "lessonId": "lesson-03",
+      "word": "部屋",
+      "reading": "へや",
+      "meaning": "room",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Places in Building",
+      "examples": [
+        {
+          "japanese": "わたしの部屋は静かです。",
+          "reading": "わたしのへやはしずかです。",
+          "english": "My room is quiet."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-10",
+      "lessonId": "lesson-03",
+      "word": "お手洗い",
+      "reading": "おてあらい",
+      "meaning": "restroom; lavatory (polite)",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Places in Building",
+      "examples": [
+        {
+          "japanese": "お手洗いは2階です。",
+          "reading": "おてあらいはにかいです。",
+          "english": "The restroom is on the second floor."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-11",
+      "lessonId": "lesson-03",
+      "word": "階段",
+      "reading": "かいだん",
+      "meaning": "stairs; staircase",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Building Features",
+      "examples": [
+        {
+          "japanese": "階段を上がります。",
+          "reading": "かいだんをあがります。",
+          "english": "I go up the stairs."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-12",
+      "lessonId": "lesson-03",
+      "word": "国",
+      "reading": "くに",
+      "meaning": "country; nation",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Geography",
+      "examples": [
+        {
+          "japanese": "お国はどちらですか。",
+          "reading": "おくにはどちらですか。",
+          "english": "Which country are you from?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-13",
+      "lessonId": "lesson-03",
+      "word": "会社",
+      "reading": "かいしゃ",
+      "meaning": "company; firm",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Institutions",
+      "examples": [
+        {
+          "japanese": "日本の会社で働きます。",
+          "reading": "にほんのかいしゃではたらきます。",
+          "english": "I work at a Japanese company."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-14",
+      "lessonId": "lesson-03",
+      "word": "円",
+      "reading": "えん",
+      "meaning": "yen (currency unit)",
+      "partOfSpeech": "counter",
+      "jlptLevel": "N5",
+      "topic": "Shopping & Money",
+      "examples": [
+        {
+          "japanese": "これは千円です。",
+          "reading": "これはせんえんです。",
+          "english": "This is 1,000 yen."
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-15",
+      "lessonId": "lesson-03",
+      "word": "いくら",
+      "reading": "いくら",
+      "meaning": "how much (price)",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Question Words",
+      "examples": [
+        {
+          "japanese": "この時計はいくらですか。",
+          "reading": "このとけいはいくらですか。",
+          "english": "How much is this watch?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-03-16",
+      "lessonId": "lesson-03",
+      "word": "百",
+      "reading": "ひゃく",
+      "meaning": "hundred",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Numbers & Counters",
+      "examples": [
+        {
+          "japanese": "三百円です。",
+          "reading": "さんびゃくえんです。",
+          "english": "It is 300 yen."
+        }
+      ]
+    }
+  ]
+}

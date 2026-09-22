@@ -1,0 +1,388 @@
+{
+  "lesson": {
+    "id": "lesson-01",
+    "number": 1,
+    "title": "Introductions & Basic Identity",
+    "titleJa": "第1課 自己紹介と身元",
+    "topic": "Self-introductions, nationalities, professions, and basic statements",
+    "status": "available",
+    "description": "Learn how to state names, nationalities, and occupations using the basic copula pattern N1 は N2 です.",
+    "objectives": [
+      "Introduce yourself politely using はじめまして and よろしくお願いします",
+      "Form affirmative and negative identity statements with です and じゃありません",
+      "Ask question sentences ending in the particle か",
+      "Express shared identity using the particle も (also/too)",
+      "Connect nouns with the possessive/attributive particle の"
+    ],
+    "vocabularyCount": 16,
+    "grammarPoints": [
+      "N1 は N2 です (N1 is N2)",
+      "N1 は N2 じゃありません (N1 is not N2)",
+      "N1 は N2 ですか (Is N1 N2?)",
+      "N も (Also / Too)",
+      "N1 の N2 (N1's N2 / N2 of N1)"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "concept-01-01",
+      "lessonId": "lesson-01",
+      "type": "grammar",
+      "title": "Noun Predicate Affirmative (は ... です)",
+      "titleJa": "N1 は N2 です",
+      "description": "Particle は indicates the topic of the sentence. です serves as a polite copula expressing state of being (is/am/are).",
+      "examples": [
+        {
+          "japanese": "わたしは学生です。",
+          "reading": "わたしはがくせいです。",
+          "english": "I am a student.",
+          "notes": "は is pronounced 'wa' when used as a topic marker."
+        },
+        {
+          "japanese": "サントスさんは会社員です。",
+          "reading": "サントスさんはかいしゃいんです。",
+          "english": "Mr. Santos is a company employee."
+        }
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "concept-01-02",
+      "lessonId": "lesson-01",
+      "type": "grammar",
+      "title": "Noun Predicate Negative (じゃありません)",
+      "titleJa": "N1 は N2 じゃありません",
+      "description": "じゃありません (or ではありません in formal writing) negates です.",
+      "examples": [
+        {
+          "japanese": "わたしは医者じゃありません。",
+          "reading": "わたしはいしゃじゃありません。",
+          "english": "I am not a doctor."
+        }
+      ],
+      "prerequisites": ["concept-01-01"]
+    },
+    {
+      "id": "concept-01-03",
+      "lessonId": "lesson-01",
+      "type": "grammar",
+      "title": "Question Sentence with か",
+      "titleJa": "S か",
+      "description": "Adding か at the end of a sentence creates a polite question without changing word order.",
+      "examples": [
+        {
+          "japanese": "ミラさんはアメリカ人ですか。",
+          "reading": "ミラさんはアメリカじんですか。",
+          "english": "Is Mr. Miller American?"
+        }
+      ],
+      "prerequisites": ["concept-01-01"]
+    },
+    {
+      "id": "concept-01-04",
+      "lessonId": "lesson-01",
+      "type": "particle",
+      "title": "Inclusion Particle も (Also/Too)",
+      "titleJa": "助詞「も」",
+      "description": "Replaces the topic marker は when the predicate applies to this noun as well.",
+      "examples": [
+        {
+          "japanese": "山田さんも先生です。",
+          "reading": "やまださんもせんせいです。",
+          "english": "Ms. Yamada is also a teacher."
+        }
+      ],
+      "prerequisites": ["concept-01-01"]
+    },
+    {
+      "id": "concept-01-05",
+      "lessonId": "lesson-01",
+      "type": "particle",
+      "title": "Noun Modifier Particle の",
+      "titleJa": "助詞「の」",
+      "description": "Connects two nouns, where N1 modifies or specifies N2 (possession, affiliation, category).",
+      "examples": [
+        {
+          "japanese": "わたしはIMCの社員です。",
+          "reading": "わたしはIMCのしゃいんです。",
+          "english": "I am an employee of IMC."
+        }
+      ],
+      "prerequisites": ["concept-01-01"]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "vocab-01-01",
+      "lessonId": "lesson-01",
+      "word": "わたし",
+      "reading": "わたし",
+      "meaning": "I; me",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "People & Pronouns",
+      "examples": [
+        {
+          "japanese": "わたしは学生です。",
+          "reading": "わたしはがくせいです。",
+          "english": "I am a student."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-02",
+      "lessonId": "lesson-01",
+      "word": "あなた",
+      "reading": "あなた",
+      "meaning": "you (singular, polite)",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "People & Pronouns",
+      "examples": [
+        {
+          "japanese": "あなたは先生ですか。",
+          "reading": "あなたはせんせいですか。",
+          "english": "Are you a teacher?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-03",
+      "lessonId": "lesson-01",
+      "word": "あの人",
+      "reading": "あのひと",
+      "meaning": "that person; he/she",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "People & Pronouns",
+      "examples": [
+        {
+          "japanese": "あの人はどなたですか。",
+          "reading": "あのひとはどなたですか。",
+          "english": "Who is that person?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-04",
+      "lessonId": "lesson-01",
+      "word": "先生",
+      "reading": "せんせい",
+      "meaning": "teacher; instructor",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Occupations",
+      "examples": [
+        {
+          "japanese": "田中先生は日本語の先生です。",
+          "reading": "たなかせんせいはにほんごのせんせいです。",
+          "english": "Teacher Tanaka is a Japanese language teacher."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-05",
+      "lessonId": "lesson-01",
+      "word": "学生",
+      "reading": "がくせい",
+      "meaning": "student",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Occupations",
+      "examples": [
+        {
+          "japanese": "ケンさんは大学生です。",
+          "reading": "ケンさんはだいがくせいです。",
+          "english": "Ken is a university student."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-06",
+      "lessonId": "lesson-01",
+      "word": "会社員",
+      "reading": "かいしゃいん",
+      "meaning": "company employee",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Occupations",
+      "examples": [
+        {
+          "japanese": "父は会社員です。",
+          "reading": "ちはかいしゃいんです。",
+          "english": "My father is a company employee."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-07",
+      "lessonId": "lesson-01",
+      "word": "医者",
+      "reading": "いしゃ",
+      "meaning": "medical doctor; physician",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Occupations",
+      "examples": [
+        {
+          "japanese": "姉は医者です。",
+          "reading": "あねはいしゃです。",
+          "english": "My older sister is a doctor."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-08",
+      "lessonId": "lesson-01",
+      "word": "研究者",
+      "reading": "けんきゅうしゃ",
+      "meaning": "researcher; scholar",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Occupations",
+      "examples": [
+        {
+          "japanese": "鈴木さんは研究者です。",
+          "reading": "すずきさんはけんきゅうしゃです。",
+          "english": "Mr. Suzuki is a researcher."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-09",
+      "lessonId": "lesson-01",
+      "word": "大学",
+      "reading": "だいがく",
+      "meaning": "university; college",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Institutions",
+      "examples": [
+        {
+          "japanese": "東京大学の学生です。",
+          "reading": "とうきょうだいがくのがくせいです。",
+          "english": "I am a student of Tokyo University."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-10",
+      "lessonId": "lesson-01",
+      "word": "病院",
+      "reading": "びょういん",
+      "meaning": "hospital",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Institutions",
+      "examples": [
+        {
+          "japanese": "桜病院の医者です。",
+          "reading": "さくらびょういんのいしゃです。",
+          "english": "He is a doctor at Sakura Hospital."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-11",
+      "lessonId": "lesson-01",
+      "word": "だれ",
+      "reading": "だれ",
+      "meaning": "who (informal/neutral)",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Question Words",
+      "examples": [
+        {
+          "japanese": "あの人はだれですか。",
+          "reading": "あのひとはだれですか。",
+          "english": "Who is that person?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-12",
+      "lessonId": "lesson-01",
+      "word": "歳",
+      "reading": "さい",
+      "meaning": "... years old (age counter)",
+      "partOfSpeech": "counter",
+      "jlptLevel": "N5",
+      "topic": "Numbers & Counters",
+      "examples": [
+        {
+          "japanese": "わたしは二十歳です。",
+          "reading": "わたしははたちです。",
+          "english": "I am twenty years old."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-13",
+      "lessonId": "lesson-01",
+      "word": "何歳",
+      "reading": "なんさい",
+      "meaning": "how old (age inquiry)",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Question Words",
+      "examples": [
+        {
+          "japanese": "タロー君は何歳ですか。",
+          "reading": "タローくんはなんさいですか。",
+          "english": "How old is Taro?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-14",
+      "lessonId": "lesson-01",
+      "word": "はい",
+      "reading": "はい",
+      "meaning": "yes (polite affirmation)",
+      "partOfSpeech": "interjection",
+      "jlptLevel": "N5",
+      "topic": "Greetings & Conversational",
+      "examples": [
+        {
+          "japanese": "はい、そうです。",
+          "reading": "はい、そうです。",
+          "english": "Yes, that is correct."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-15",
+      "lessonId": "lesson-01",
+      "word": "いいえ",
+      "reading": "いいえ",
+      "meaning": "no (polite negation)",
+      "partOfSpeech": "interjection",
+      "jlptLevel": "N5",
+      "topic": "Greetings & Conversational",
+      "examples": [
+        {
+          "japanese": "いいえ、違います。",
+          "reading": "いいえ、ちがいます。",
+          "english": "No, that is incorrect."
+        }
+      ]
+    },
+    {
+      "id": "vocab-01-16",
+      "lessonId": "lesson-01",
+      "word": "初めまして",
+      "reading": "はじめまして",
+      "meaning": "Nice to meet you (how do you do)",
+      "partOfSpeech": "phrase",
+      "jlptLevel": "N5",
+      "topic": "Greetings & Conversational",
+      "examples": [
+        {
+          "japanese": "初めまして、田中です。どうぞよろしく。",
+          "reading": "はじめまして、たなかです。どうぞよろしく。",
+          "english": "Nice to meet you, I am Tanaka. Pleased to make your acquaintance."
+        }
+      ]
+    }
+  ]
+}

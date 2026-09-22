@@ -1,0 +1,355 @@
+{
+  "lesson": {
+    "id": "lesson-04",
+    "number": 4,
+    "title": "Time, Days & Verb Conjugations",
+    "titleJa": "第4課 時間・曜日・動詞活用",
+    "topic": "Telling time, routine verbs (masu/masen/mashita), and time particles (kara/made)",
+    "status": "available",
+    "description": "Learn to tell time and days, conjugate verbs into polite present and past affirmative/negative forms, and express durations using から and まで.",
+    "objectives": [
+      "Ask and state the time using 〜時 and 〜分",
+      "Name the days of the week",
+      "Conjugate verbs into -ます, -ません, -ました, and -ませんでした",
+      "Mark point-in-time actions with particle に",
+      "State starting and ending times using から and まで"
+    ],
+    "vocabularyCount": 16,
+    "grammarPoints": [
+      "今 〜時 〜分 です (It is currently ~:~~)",
+      "V ます / V ません (Non-past affirmative / negative)",
+      "V ました / V ませんでした (Past affirmative / negative)",
+      "N(time) に V (Action at specific numerical time)",
+      "N1 から N2 まで (From N1 to N2)"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "concept-04-01",
+      "lessonId": "lesson-04",
+      "type": "grammar",
+      "title": "Polite Verb Conjugations (-ます forms)",
+      "titleJa": "動詞「ます形」の活用",
+      "description": "The basic polite non-past and past verb endings in Japanese.",
+      "examples": [
+        {
+          "japanese": "毎朝6時に起きます。",
+          "reading": "まいあさろくじにおきます。",
+          "english": "I wake up at 6 every morning."
+        },
+        {
+          "japanese": "昨日は勉強しませんでした。",
+          "reading": "きのうはべんきょうしませんでした。",
+          "english": "I did not study yesterday."
+        }
+      ],
+      "prerequisites": ["concept-01-01"]
+    },
+    {
+      "id": "concept-04-02",
+      "lessonId": "lesson-04",
+      "type": "particle",
+      "title": "Time Marker Particle に",
+      "titleJa": "助詞「に」（時点）",
+      "description": "Marks a specific numerical point in time at which an action takes place.",
+      "examples": [
+        {
+          "japanese": "7時半に朝ご飯を食べます。",
+          "reading": "しちじはんにおさごはんをたべます。",
+          "english": "I eat breakfast at 7:30."
+        }
+      ],
+      "prerequisites": ["concept-04-01"]
+    },
+    {
+      "id": "concept-04-03",
+      "lessonId": "lesson-04",
+      "type": "particle",
+      "title": "Range Particles から & まで",
+      "titleJa": "助詞「から」「まで」",
+      "description": "Indicates the starting point (から) and ending point (まで) in time or space.",
+      "examples": [
+        {
+          "japanese": "銀行は9時から3時までです。",
+          "reading": "ぎんこうはくじからさんじまでです。",
+          "english": "The bank is open from 9 to 3."
+        }
+      ],
+      "prerequisites": ["concept-04-01"]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "vocab-04-01",
+      "lessonId": "lesson-04",
+      "word": "起きます",
+      "reading": "おきます",
+      "meaning": "to wake up; to get up",
+      "partOfSpeech": "verb",
+      "jlptLevel": "N5",
+      "topic": "Daily Routine Verbs",
+      "examples": [
+        {
+          "japanese": "明日早く起きます。",
+          "reading": "あしたはやくおきます。",
+          "english": "I will wake up early tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-02",
+      "lessonId": "lesson-04",
+      "word": "寝ます",
+      "reading": "ねます",
+      "meaning": "to sleep; to go to bed",
+      "partOfSpeech": "verb",
+      "jlptLevel": "N5",
+      "topic": "Daily Routine Verbs",
+      "examples": [
+        {
+          "japanese": "11時に寝ます。",
+          "reading": "じゅういちじにねます。",
+          "english": "I go to bed at 11 o'clock."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-03",
+      "lessonId": "lesson-04",
+      "word": "働きます",
+      "reading": "はたらきます",
+      "meaning": "to work",
+      "partOfSpeech": "verb",
+      "jlptLevel": "N5",
+      "topic": "Daily Routine Verbs",
+      "examples": [
+        {
+          "japanese": "月曜日から金曜日まで働きます。",
+          "reading": "げつようびからきんようびまではたらきます。",
+          "english": "I work from Monday to Friday."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-04",
+      "lessonId": "lesson-04",
+      "word": "勉強します",
+      "reading": "べんきょうします",
+      "meaning": "to study",
+      "partOfSpeech": "verb",
+      "jlptLevel": "N5",
+      "topic": "Daily Routine Verbs",
+      "examples": [
+        {
+          "japanese": "毎晩日本語を勉強します。",
+          "reading": "まいばんにほんごをべんきょうします。",
+          "english": "I study Japanese every night."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-05",
+      "lessonId": "lesson-04",
+      "word": "終わります",
+      "reading": "おわります",
+      "meaning": "to finish; to end",
+      "partOfSpeech": "verb",
+      "jlptLevel": "N5",
+      "topic": "Daily Routine Verbs",
+      "examples": [
+        {
+          "japanese": "会議は5時に終わりました。",
+          "reading": "かいぎはごじにおわりました。",
+          "english": "The meeting finished at 5 o'clock."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-06",
+      "lessonId": "lesson-04",
+      "word": "今",
+      "reading": "いま",
+      "meaning": "now; at present",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Time Expressions",
+      "examples": [
+        {
+          "japanese": "今、何時ですか。",
+          "reading": "いま、なんじですか。",
+          "english": "What time is it now?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-07",
+      "lessonId": "lesson-04",
+      "word": "時",
+      "reading": "じ",
+      "meaning": "o'clock (hour counter)",
+      "partOfSpeech": "counter",
+      "jlptLevel": "N5",
+      "topic": "Time Expressions",
+      "examples": [
+        {
+          "japanese": "ちょうど3時です。",
+          "reading": "ちょうどさんじです。",
+          "english": "It is exactly 3 o'clock."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-08",
+      "lessonId": "lesson-04",
+      "word": "分",
+      "reading": "ふん / ぷん",
+      "meaning": "minute (minute counter)",
+      "partOfSpeech": "counter",
+      "jlptLevel": "N5",
+      "topic": "Time Expressions",
+      "examples": [
+        {
+          "japanese": "10分待ちました。",
+          "reading": "じゅっぷんまちました。",
+          "english": "I waited for 10 minutes."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-09",
+      "lessonId": "lesson-04",
+      "word": "半",
+      "reading": "はん",
+      "meaning": "half (past the hour)",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Time Expressions",
+      "examples": [
+        {
+          "japanese": "2時半です。",
+          "reading": "にじはんです。",
+          "english": "It is 2:30."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-10",
+      "lessonId": "lesson-04",
+      "word": "朝",
+      "reading": "あさ",
+      "meaning": "morning",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Time Expressions",
+      "examples": [
+        {
+          "japanese": "朝ジョギングをします。",
+          "reading": "あさジョギングをします。",
+          "english": "I jog in the morning."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-11",
+      "lessonId": "lesson-04",
+      "word": "昼",
+      "reading": "ひる",
+      "meaning": "daytime; noon",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Time Expressions",
+      "examples": [
+        {
+          "japanese": "昼休みに散歩します。",
+          "reading": "ひるやすみにさんぽします。",
+          "english": "I take a walk during the lunch break."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-12",
+      "lessonId": "lesson-04",
+      "word": "晩",
+      "reading": "ばん",
+      "meaning": "night; evening",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Time Expressions",
+      "examples": [
+        {
+          "japanese": "晩ご飯を食べましたか。",
+          "reading": "ばんごはんをたべましたか。",
+          "english": "Did you eat dinner?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-13",
+      "lessonId": "lesson-04",
+      "word": "月曜日",
+      "reading": "げつようび",
+      "meaning": "Monday",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Days of the Week",
+      "examples": [
+        {
+          "japanese": "月曜日はテストがあります。",
+          "reading": "げつようびはテストがあります。",
+          "english": "There is a test on Monday."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-14",
+      "lessonId": "lesson-04",
+      "word": "日曜日",
+      "reading": "にちようび",
+      "meaning": "Sunday",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Days of the Week",
+      "examples": [
+        {
+          "japanese": "日曜日は休みです。",
+          "reading": "にちようびはやすみです。",
+          "english": "Sunday is a day off."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-15",
+      "lessonId": "lesson-04",
+      "word": "昨日",
+      "reading": "きのう",
+      "meaning": "yesterday",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Calendar & Relative Days",
+      "examples": [
+        {
+          "japanese": "昨日は雨でした。",
+          "reading": "きのうはあめでした。",
+          "english": "It rained yesterday."
+        }
+      ]
+    },
+    {
+      "id": "vocab-04-16",
+      "lessonId": "lesson-04",
+      "word": "明日",
+      "reading": "あした",
+      "meaning": "tomorrow",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Calendar & Relative Days",
+      "examples": [
+        {
+          "japanese": "明日は暇ですか。",
+          "reading": "あしたはひまですか。",
+          "english": "Are you free tomorrow?"
+        }
+      ]
+    }
+  ]
+}

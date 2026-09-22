@@ -1,0 +1,369 @@
+{
+  "lesson": {
+    "id": "lesson-02",
+    "number": 2,
+    "title": "Objects, Demonstratives & Possession",
+    "titleJa": "第2課 物と指示詞・所有",
+    "topic": "Demonstratives (kore/sore/are), everyday items, and stating ownership",
+    "status": "available",
+    "description": "Learn demonstrative pronouns and demonstrative noun modifiers to identify nearby and distant objects and their owners.",
+    "objectives": [
+      "Distinguish spatial distance using これ (near speaker), それ (near listener), and あれ (far from both)",
+      "Use noun-modifying demonstratives この N, その N, and あの N",
+      "Express agreement or disagreement with そうです and 違います",
+      "Ask and answer questions about possession using だれの"
+    ],
+    "vocabularyCount": 16,
+    "grammarPoints": [
+      "これ / それ / あれ は N です (This / That is N)",
+      "この N / その N / あの N (This N / That N)",
+      "そうです / そうじゃありません (That is so / That is not so)",
+      "S1 か、S2 か (Alternative questions: Is it S1 or S2?)",
+      "N1 の N2 (Possession / Ownership: Whose N2 is it?)"
+    ]
+  },
+  "concepts": [
+    {
+      "id": "concept-02-01",
+      "lessonId": "lesson-02",
+      "type": "grammar",
+      "title": "Demonstrative Pronouns (これ・それ・あれ)",
+      "titleJa": "これ・それ・あれ",
+      "description": "Used as standalone noun pronouns based on relative distance to speaker and listener.",
+      "examples": [
+        {
+          "japanese": "これは本です。",
+          "reading": "これはほんです。",
+          "english": "This is a book (near me)."
+        },
+        {
+          "japanese": "それは辞書ですか。",
+          "reading": "それはじしょですか。",
+          "english": "Is that a dictionary (near you)?"
+        },
+        {
+          "japanese": "あれは時計です。",
+          "reading": "あれはとけいです。",
+          "english": "That over there is a clock."
+        }
+      ],
+      "prerequisites": ["concept-01-01"]
+    },
+    {
+      "id": "concept-02-02",
+      "lessonId": "lesson-02",
+      "type": "grammar",
+      "title": "Demonstrative Noun Modifiers (この・その・あの)",
+      "titleJa": "この N・その N・あの N",
+      "description": "Must immediately precede a noun to modify it directly.",
+      "examples": [
+        {
+          "japanese": "この傘はわたしのです。",
+          "reading": "このかさはわたしのです。",
+          "english": "This umbrella is mine."
+        },
+        {
+          "japanese": "その鍵はだれのですか。",
+          "reading": "そのかぎはだれのですか。",
+          "english": "Whose key is that?"
+        }
+      ],
+      "prerequisites": ["concept-02-01"]
+    },
+    {
+      "id": "concept-02-03",
+      "lessonId": "lesson-02",
+      "type": "grammar",
+      "title": "Confirming with そうです and 違います",
+      "titleJa": "そうです・違います",
+      "description": "Polite expressions used to affirm or deny questions about noun identity.",
+      "examples": [
+        {
+          "japanese": "はい、そうです。",
+          "reading": "はい、そうです。",
+          "english": "Yes, that is right."
+        },
+        {
+          "japanese": "いいえ、違います。手帳です。",
+          "reading": "いいえ、ちがいます。てちょうです。",
+          "english": "No, it's not. It is a pocket notebook."
+        }
+      ],
+      "prerequisites": ["concept-01-03"]
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "vocab-02-01",
+      "lessonId": "lesson-02",
+      "word": "これ",
+      "reading": "これ",
+      "meaning": "this (thing close to the speaker)",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Demonstratives",
+      "examples": [
+        {
+          "japanese": "これはペンです。",
+          "reading": "これはペンです。",
+          "english": "This is a pen."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-02",
+      "lessonId": "lesson-02",
+      "word": "それ",
+      "reading": "それ",
+      "meaning": "that (thing close to the listener)",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Demonstratives",
+      "examples": [
+        {
+          "japanese": "それは何ですか。",
+          "reading": "それはなんですか。",
+          "english": "What is that?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-03",
+      "lessonId": "lesson-02",
+      "word": "あれ",
+      "reading": "あれ",
+      "meaning": "that over there (thing distant from both)",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Demonstratives",
+      "examples": [
+        {
+          "japanese": "あれは車です。",
+          "reading": "あれはくるまです。",
+          "english": "That over there is a car."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-04",
+      "lessonId": "lesson-02",
+      "word": "この",
+      "reading": "この",
+      "meaning": "this ... (modifies following noun)",
+      "partOfSpeech": "pre-noun adjectival",
+      "jlptLevel": "N5",
+      "topic": "Demonstratives",
+      "examples": [
+        {
+          "japanese": "この本は面白いです。",
+          "reading": "このほんはおもしろいです。",
+          "english": "This book is interesting."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-05",
+      "lessonId": "lesson-02",
+      "word": "本",
+      "reading": "ほん",
+      "meaning": "book",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Stationery & Reading",
+      "examples": [
+        {
+          "japanese": "日本語の本です。",
+          "reading": "にほんごのほんです。",
+          "english": "It is a Japanese book."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-06",
+      "lessonId": "lesson-02",
+      "word": "辞書",
+      "reading": "じしょ",
+      "meaning": "dictionary",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Stationery & Reading",
+      "examples": [
+        {
+          "japanese": "電子辞書を買いました。",
+          "reading": "でんしじしょをかいました。",
+          "english": "I bought an electronic dictionary."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-07",
+      "lessonId": "lesson-02",
+      "word": "雑誌",
+      "reading": "ざっし",
+      "meaning": "magazine; journal",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Stationery & Reading",
+      "examples": [
+        {
+          "japanese": "自動車の雑誌です。",
+          "reading": "じどうしゃのざっしです。",
+          "english": "It is an automotive magazine."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-08",
+      "lessonId": "lesson-02",
+      "word": "新聞",
+      "reading": "しんぶん",
+      "meaning": "newspaper",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Stationery & Reading",
+      "examples": [
+        {
+          "japanese": "英語の新聞です。",
+          "reading": "えいごのしんぶんです。",
+          "english": "It is an English newspaper."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-09",
+      "lessonId": "lesson-02",
+      "word": "手帳",
+      "reading": "てちょう",
+      "meaning": "pocket notebook; personal organizer",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Personal Items",
+      "examples": [
+        {
+          "japanese": "これは黒い手帳です。",
+          "reading": "これはくろいてちょうです。",
+          "english": "This is a black pocket notebook."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-10",
+      "lessonId": "lesson-02",
+      "word": "時計",
+      "reading": "とけい",
+      "meaning": "clock; watch",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Personal Items",
+      "examples": [
+        {
+          "japanese": "スイスの時計です。",
+          "reading": "スイスのとけいです。",
+          "english": "It is a Swiss watch."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-11",
+      "lessonId": "lesson-02",
+      "word": "傘",
+      "reading": "かさ",
+      "meaning": "umbrella",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Personal Items",
+      "examples": [
+        {
+          "japanese": "だれの傘ですか。",
+          "reading": "だれのかさですか。",
+          "english": "Whose umbrella is it?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-12",
+      "lessonId": "lesson-02",
+      "word": "鞄",
+      "reading": "かばん",
+      "meaning": "bag; briefcase",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Personal Items",
+      "examples": [
+        {
+          "japanese": "革の鞄です。",
+          "reading": "かわのかばんです。",
+          "english": "It is a leather bag."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-13",
+      "lessonId": "lesson-02",
+      "word": "鍵",
+      "reading": "かぎ",
+      "meaning": "key",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Personal Items",
+      "examples": [
+        {
+          "japanese": "部屋の鍵です。",
+          "reading": "へやのかぎです。",
+          "english": "It is the room key."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-14",
+      "lessonId": "lesson-02",
+      "word": "車",
+      "reading": "くるま",
+      "meaning": "car; automobile",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Vehicles",
+      "examples": [
+        {
+          "japanese": "日本の車です。",
+          "reading": "にほんのくるまです。",
+          "english": "It is a Japanese car."
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-15",
+      "lessonId": "lesson-02",
+      "word": "何",
+      "reading": "なん / なに",
+      "meaning": "what",
+      "partOfSpeech": "pronoun",
+      "jlptLevel": "N5",
+      "topic": "Question Words",
+      "examples": [
+        {
+          "japanese": "これは何ですか。",
+          "reading": "これはなんですか。",
+          "english": "What is this?"
+        }
+      ]
+    },
+    {
+      "id": "vocab-02-16",
+      "lessonId": "lesson-02",
+      "word": "お土産",
+      "reading": "おみやげ",
+      "meaning": "souvenir; gift",
+      "partOfSpeech": "noun",
+      "jlptLevel": "N5",
+      "topic": "Culture & Daily",
+      "examples": [
+        {
+          "japanese": "京都のお土産です。",
+          "reading": "きょうとのおみやげです。",
+          "english": "It is a souvenir from Kyoto."
+        }
+      ]
+    }
+  ]
+}
