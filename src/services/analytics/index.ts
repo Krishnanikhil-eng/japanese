@@ -9,6 +9,8 @@
 import { db } from "@/db";
 import type { Attempt, MasteryLevel } from "@/types";
 
+export * from "./weak-areas";
+
 export interface ConceptAnalytics {
   conceptId: string;
   totalAttempts: number;
