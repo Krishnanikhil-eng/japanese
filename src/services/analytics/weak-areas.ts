@@ -6,17 +6,19 @@
 // Analyzes accuracy, error frequency, and confusion pairings.
 // ============================================================
 
-import { db } from "@/db";
-import { PARTICLES } from "@/data/particles";
-import type { WeakArea, Attempt } from "@/types";
+import { db } from "../../db/index.ts";
+import { PARTICLES } from "../../data/particles/index.ts";
+import type { WeakArea, Attempt, Particle } from "@/types";
 
 /**
- * Derives current weak areas by aggregating historical Attempt records.
- * Identifies concepts with low accuracy (< 70%) or recent recurring mistakes.
+ * Pure calculation engine for weak areas and confusion pairings from attempt history.
+ * Fully deterministic and isolated for unit testing.
  */
-export async function getWeakAreas(): Promise<WeakArea[]> {
-  const allAttempts = await db.attempts.toArray();
-
+export function calculateWeakAreasFromAttempts(
+  allAttempts: Attempt[],
+  particlesMeta: Particle[] = PARTICLES,
+  titleResolver?: (conceptId: string, conceptType: string) => string
+): WeakArea[] {
   if (allAttempts.length === 0) {
     return [];
   }
@@ -64,7 +66,7 @@ export async function getWeakAreas(): Promise<WeakArea[]> {
 
     // Add mapped confusion pairs for known particles
     if (conceptType === "particle") {
-      const particleMeta = PARTICLES.find(
+      const particleMeta = particlesMeta.find(
         (p) => p.id === conceptId || `particle-${p.particle}` === conceptId
       );
       if (particleMeta) {
@@ -76,15 +78,18 @@ export async function getWeakAreas(): Promise<WeakArea[]> {
 
     // Resolve human-readable title
     let title = conceptId;
-    if (conceptId.startsWith("particle-")) {
-      const pChar = conceptId.replace("particle-", "");
-      title = `Particle 「${pChar}」`;
-    } else if (conceptId.startsWith("vocab-")) {
-      const vocab = await db.vocabulary.get(conceptId);
-      title = vocab ? `${vocab.word} (${vocab.meaning})` : conceptId;
-    } else if (conceptId.startsWith("concept-")) {
-      const concept = await db.concepts.get(conceptId);
-      title = concept ? concept.title : conceptId;
+    if (titleResolver) {
+      title = titleResolver(conceptId, conceptType);
+    } else if (conceptId.startsWith("particle-")) {
+      const pMeta = particlesMeta.find(
+        (p) => p.id === conceptId || `particle-${p.particle}` === conceptId
+      );
+      if (pMeta) {
+        title = `Particle 「${pMeta.particle}」`;
+      } else {
+        const pChar = conceptId.replace("particle-", "");
+        title = `Particle 「${pChar}」`;
+      }
     }
 
     weakAreas.push({
@@ -107,4 +112,47 @@ export async function getWeakAreas(): Promise<WeakArea[]> {
   });
 
   return weakAreas;
+}
+
+/**
+ * Derives current weak areas by aggregating historical Attempt records from Dexie IndexedDB.
+ */
+export async function getWeakAreas(): Promise<WeakArea[]> {
+  const allAttempts = await db.attempts.toArray();
+
+  if (allAttempts.length === 0) {
+    return [];
+  }
+
+  // Asynchronously resolve vocab and concept titles
+  const vocabMap = new Map<string, string>();
+  const conceptMap = new Map<string, string>();
+
+  const nonParticleConcepts = Array.from(
+    new Set(allAttempts.filter((a) => a.conceptType !== "particle").map((a) => a.conceptId))
+  );
+
+  for (const cId of nonParticleConcepts) {
+    if (cId.startsWith("vocab-")) {
+      const v = await db.vocabulary.get(cId);
+      if (v) vocabMap.set(cId, `${v.word} (${v.meaning})`);
+    } else if (cId.startsWith("concept-")) {
+      const c = await db.concepts.get(cId);
+      if (c) conceptMap.set(cId, c.title);
+    }
+  }
+
+  return calculateWeakAreasFromAttempts(
+    allAttempts,
+    PARTICLES,
+    (conceptId, _conceptType) => {
+      if (conceptId.startsWith("particle-")) {
+        const pChar = conceptId.replace("particle-", "");
+        return `Particle 「${pChar}」`;
+      }
+      if (vocabMap.has(conceptId)) return vocabMap.get(conceptId)!;
+      if (conceptMap.has(conceptId)) return conceptMap.get(conceptId)!;
+      return conceptId;
+    }
+  );
 }

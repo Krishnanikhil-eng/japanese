@@ -6,20 +6,22 @@
 // Zero static or fake demo data.
 // ============================================================
 
-import { getWeakAreas, getDueReviews } from "@/services/analytics";
-import { db } from "@/db";
-import type { StudyRecommendation } from "@/types";
+import { getWeakAreas, getDueReviews } from "../analytics/index.ts";
+import { db } from "../../db/index.ts";
+import type { StudyRecommendation, WeakArea } from "@/types";
 
 /**
- * Derives actionable study recommendations dynamically from real Attempt records
- * and SRS review schedules.
+ * Pure recommendation calculation algorithm.
+ * Evaluates weak areas, ts-fsrs due review load, and lesson progress.
  */
-export async function getStudyRecommendation(): Promise<StudyRecommendation[]> {
+export function calculateStudyRecommendations(
+  weakAreas: WeakArea[],
+  dueReviewsCount: number = 0,
+  fallbackLessonTitle?: string
+): StudyRecommendation[] {
   const recommendations: StudyRecommendation[] = [];
 
   // 1. Check for real weak areas derived from user attempts
-  const weakAreas = await getWeakAreas();
-
   for (const weak of weakAreas) {
     let title = `Review ${weak.title}`;
     let reason = `Accuracy is ${Math.round(weak.accuracy * 100)}% with ${weak.recentMistakes} recent mistake${weak.recentMistakes === 1 ? "" : "s"}.`;
@@ -42,27 +44,22 @@ export async function getStudyRecommendation(): Promise<StudyRecommendation[]> {
   }
 
   // 2. Check for due SRS reviews
-  const dueReviews = await getDueReviews();
-  if (dueReviews.length > 0) {
+  if (dueReviewsCount > 0) {
     recommendations.push({
       conceptId: "srs-due-reviews",
-      title: `Complete Due Reviews (${dueReviews.length} words)`,
-      reason: `ts-fsrs has scheduled ${dueReviews.length} vocabulary ${dueReviews.length === 1 ? "card" : "cards"} for recall reinforcement.`,
+      title: `Complete Due Reviews (${dueReviewsCount} words)`,
+      reason: `ts-fsrs has scheduled ${dueReviewsCount} vocabulary ${dueReviewsCount === 1 ? "card" : "cards"} for recall reinforcement.`,
       priority: 85,
       type: "vocabulary",
-      questionCount: dueReviews.length,
+      questionCount: dueReviewsCount,
     });
   }
 
   // 3. Fallback: If no urgent weak areas or reviews, recommend advancing the current lesson
   if (recommendations.length === 0) {
-    const userState = await db.userState.get("default-user");
-    const lessonId = userState?.currentLessonId || "lesson-01";
-    const lesson = await db.lessons.get(lessonId);
-
     recommendations.push({
-      conceptId: lessonId,
-      title: lesson ? `Study ${lesson.title}` : "Study Next Lesson",
+      conceptId: "current-lesson",
+      title: fallbackLessonTitle ? `Study ${fallbackLessonTitle}` : "Study Next Lesson",
       reason: "No current weaknesses detected. Advance through new grammar and vocabulary.",
       priority: 50,
       type: "grammar",
@@ -74,4 +71,23 @@ export async function getStudyRecommendation(): Promise<StudyRecommendation[]> {
   recommendations.sort((a, b) => b.priority - a.priority);
 
   return recommendations;
+}
+
+/**
+ * Derives actionable study recommendations dynamically from real Attempt records
+ * in Dexie and SRS review schedules.
+ */
+export async function getStudyRecommendation(): Promise<StudyRecommendation[]> {
+  const weakAreas = await getWeakAreas();
+  const dueReviews = await getDueReviews();
+
+  let fallbackTitle: string | undefined;
+  if (weakAreas.length === 0 && dueReviews.length === 0) {
+    const userState = await db.userState.get("default-user");
+    const lessonId = userState?.currentLessonId || "lesson-01";
+    const lesson = await db.lessons.get(lessonId);
+    fallbackTitle = lesson?.title;
+  }
+
+  return calculateStudyRecommendations(weakAreas, dueReviews.length, fallbackTitle);
 }

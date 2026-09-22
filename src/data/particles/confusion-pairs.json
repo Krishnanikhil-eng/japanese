@@ -53,6 +53,12 @@
         "correctParticle": "へ",
         "wrongParticle": "で",
         "explanation": "Direction of travel takes へ (or destination に)."
+      },
+      {
+        "sentence": "京都___着きました。",
+        "correctParticle": "に",
+        "wrongParticle": "で",
+        "explanation": "Arrival at a specific destination takes に."
       }
     ]
   },
@@ -74,6 +80,27 @@
         "correctParticle": "で",
         "wrongParticle": "と",
         "explanation": "Acting alone is a condition/mode of action, requiring で."
+      }
+    ]
+  },
+  {
+    "id": "pair-kara-made",
+    "particleA": "から",
+    "particleB": "まで",
+    "title": "から vs まで (Starting Point vs Ending Point)",
+    "distinction": "から specifies the origin or starting point in time or place ('from'). まで specifies the endpoint or boundary in time or place ('until / to'). They frequently occur together as 〜から〜まで.",
+    "comparisonExamples": [
+      {
+        "sentence": "9時___会議が始まります。",
+        "correctParticle": "から",
+        "wrongParticle": "まで",
+        "explanation": "始まります indicates starting; origin in time takes から."
+      },
+      {
+        "sentence": "5時___働きます。",
+        "correctParticle": "まで",
+        "wrongParticle": "から",
+        "explanation": "Ending limit in time takes まで."
       }
     ]
   }

@@ -6,10 +6,10 @@
 // records in IndexedDB. No fake or static mock metrics.
 // ============================================================
 
-import { db } from "@/db";
+import { db } from "../../db/index.ts";
 import type { Attempt, MasteryLevel } from "@/types";
 
-export * from "./weak-areas";
+export * from "./weak-areas.ts";
 
 export interface ConceptAnalytics {
   conceptId: string;

@@ -6,8 +6,8 @@
 // ============================================================
 
 import Dexie, { type Table } from "dexie";
-import { DB_NAME, DB_VERSION } from "@/domain/enums";
-import { DB_SCHEMA_V1 } from "./schema";
+import { DB_NAME, DB_VERSION } from "../domain/enums.ts";
+import { DB_SCHEMA_V1 } from "./schema.ts";
 import type {
   Lesson,
   Concept,
@@ -62,4 +62,4 @@ export async function initDatabase(): Promise<boolean> {
   }
 }
 
-export * from "./schema";
+export * from "./schema.ts";

@@ -2,4 +2,4 @@
 // Recommendation Service — Module Exports
 // ============================================================
 
-export * from "./engine";
+export * from "./engine.ts";
