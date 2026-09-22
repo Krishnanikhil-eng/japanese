@@ -1,8 +1,8 @@
-import lesson01 from "./lesson-01.json";
-import lesson02 from "./lesson-02.json";
-import lesson03 from "./lesson-03.json";
-import lesson04 from "./lesson-04.json";
-import lesson05 from "./lesson-05.json";
+import lesson01 from "./lesson-01.json" with { type: "json" };
+import lesson02 from "./lesson-02.json" with { type: "json" };
+import lesson03 from "./lesson-03.json" with { type: "json" };
+import lesson04 from "./lesson-04.json" with { type: "json" };
+import lesson05 from "./lesson-05.json" with { type: "json" };
 import type { Lesson, Concept, Vocabulary } from "@/types";
 
 export interface LessonSeedData {
